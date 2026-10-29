@@ -1,0 +1,2 @@
+# Preserve exact bytes of evidence snapshots and source hashes across checkouts.
+* -text
