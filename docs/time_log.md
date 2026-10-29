@@ -34,3 +34,5 @@ Optimization results: 17/20 repeated acceptance expectations met; targeted audit
 结论仅限本批必要条件检查；人工语义审核清单未冒充已审核，小样本不足以推断生产准确率。正式CLI继续默认开启审查。
 
 2026-10-29规范证据补验：当前实现真实模型10/10符合预期，完整性检查10/10通过；测试墙钟135.594秒，含API等待，不含文档整理。证据存于examples/evidence-20261029T031505879381Z，索引examples/README.md；复核边界见docs/03-evaluation.md。完整开发墙钟仍未可靠记录。
+
+独立虚拟环境真实CLI实测9.922秒；提交导出副本真实CLI实测6.891秒，均包含模型等待。证据完整性检查通过。以上由AI执行，不计为个人独立复核；完整开发墙钟仍未记录。
