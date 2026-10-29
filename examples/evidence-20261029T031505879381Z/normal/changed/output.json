@@ -1,0 +1,27 @@
+{
+  "status": "answered",
+  "answer": "根据《D01》规定，报销期限为45天。",
+  "citations": [
+    {
+      "document_id": "D01",
+      "passage_id": "P01",
+      "version_date": "2026-01-01",
+      "quote": "报销期限为45天。"
+    }
+  ],
+  "gaps": [],
+  "conflicts": [],
+  "follow_up_question": null,
+  "steps": 4,
+  "mode": "remote",
+  "audit_enabled": true,
+  "model_calls": 5,
+  "usage": {
+    "prompt_tokens": 2867,
+    "completion_tokens": 815,
+    "total_tokens": 3682,
+    "prompt_cache_hit_tokens": 1408,
+    "prompt_cache_miss_tokens": 1459
+  },
+  "elapsed_seconds": 8.453
+}

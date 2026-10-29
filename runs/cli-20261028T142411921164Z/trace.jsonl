@@ -1,0 +1,3 @@
+{"event": "start", "mode": "remote", "model": "deepseek-flash", "data_sha256": "45b38c8cbbca8f5dfd1145565453c674e04bbc7abeef5feb604641b3e5be128b", "max_steps": 1, "question": "报销期限多久？", "audit_enabled": true, "max_model_calls": 2}
+{"step": 1, "event": "model_error", "error_type": "HTTPError", "http_status": 402}
+{"event": "final", "result": {"status": "model_error", "answer": "模型调用失败。", "citations": [], "gaps": ["HTTPError"], "conflicts": [], "follow_up_question": null, "http_status": 402, "steps": 0, "mode": "remote", "audit_enabled": true, "model_calls": 1, "usage": {}, "elapsed_seconds": 0.454}, "elapsed_ms": 454}

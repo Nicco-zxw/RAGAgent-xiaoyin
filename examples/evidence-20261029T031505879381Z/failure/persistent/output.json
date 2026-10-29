@@ -1,0 +1,22 @@
+{
+  "status": "tool_error",
+  "answer": "检索到可能相关的报销期限条款，但多次读取原文均超时，无法核验具体内容并形成可引用答案。",
+  "citations": [],
+  "gaps": [
+    "未能成功读取 D01/P01 原文，无法确认报销期限及适用范围。"
+  ],
+  "conflicts": [],
+  "follow_up_question": "请稍后重试，或提供可正常读取的报销制度原文。",
+  "steps": 6,
+  "mode": "remote",
+  "audit_enabled": true,
+  "model_calls": 7,
+  "usage": {
+    "prompt_tokens": 4158,
+    "completion_tokens": 1567,
+    "total_tokens": 5725,
+    "prompt_cache_hit_tokens": 2304,
+    "prompt_cache_miss_tokens": 1854
+  },
+  "elapsed_seconds": 14.453
+}

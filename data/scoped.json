@@ -1,0 +1,35 @@
+[
+  {
+    "document_id": "S01",
+    "version_date": "2026-01-01",
+    "title": "销售部报销制度",
+    "passages": [
+      {
+        "passage_id": "P01",
+        "text": "销售部员工报销期限为30天，本条仅适用于销售部。"
+      }
+    ]
+  },
+  {
+    "document_id": "S02",
+    "version_date": "2026-02-01",
+    "title": "研发部报销制度",
+    "passages": [
+      {
+        "passage_id": "P01",
+        "text": "研发部员工报销期限为15天，本条仅适用于研发部。"
+      }
+    ]
+  },
+  {
+    "document_id": "N01",
+    "version_date": "2026-03-01",
+    "title": "产品退款制度",
+    "passages": [
+      {
+        "passage_id": "P01",
+        "text": "产品退款期限为7天，与员工报销无关。"
+      }
+    ]
+  }
+]

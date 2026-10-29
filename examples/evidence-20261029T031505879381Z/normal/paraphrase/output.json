@@ -1,0 +1,27 @@
+{
+  "status": "answered",
+  "answer": "报销期限为30天。",
+  "citations": [
+    {
+      "document_id": "D01",
+      "passage_id": "P01",
+      "version_date": "2026-01-01",
+      "quote": "报销期限为30天。"
+    }
+  ],
+  "gaps": [],
+  "conflicts": [],
+  "follow_up_question": null,
+  "steps": 4,
+  "mode": "remote",
+  "audit_enabled": true,
+  "model_calls": 5,
+  "usage": {
+    "prompt_tokens": 2874,
+    "completion_tokens": 983,
+    "total_tokens": 3857,
+    "prompt_cache_hit_tokens": 1536,
+    "prompt_cache_miss_tokens": 1338
+  },
+  "elapsed_seconds": 9.969
+}

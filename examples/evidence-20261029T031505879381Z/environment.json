@@ -1,0 +1,17 @@
+{
+  "python": "3.12.10",
+  "model": "deepseek-flash",
+  "source_hashes": {
+    "enterprise_qa/audit.py": "ba075269df2767cd0ed01f4009cc594974ff4775dde9e6b65c5f30ae60798e16",
+    "enterprise_qa/cli.py": "c56962a5c802f255df91e700cb8d7817f773f33392082a73b47d03b4fd0a3169",
+    "enterprise_qa/config.py": "4aa8bca2ce899ece8e8dbcb56b15998d3d6dc217364feebc958c384a8baa8f50",
+    "enterprise_qa/core.py": "83a8d217dd94d50f1667418922d337416a7bc7aead2713262ebc38088a29e81b",
+    "enterprise_qa/evidence.py": "94ac76fd5e2d6763c58f14ed87474c15580dc41379730ccb328cdb1bbe6fe395",
+    "enterprise_qa/__init__.py": "e0468e6a98c7de57ce40b708c0b5aeb78937bee7239055d26d81f463105a7ce1",
+    "tests/run_evidence.py": "f2647616d4bde846ad2e1c3504e61546225c84d2da02f753328e5afd578b8576",
+    "tests/test_acceptance.py": "76f6df5f17e9d1d2ac29633324df81eea15b487d7d252653f9fe65c3e41629cd",
+    "tests/test_robustness.py": "249f53247caa31a04df0074b898adf743bc381d0ddf6b9b00f46f1ceb978f610",
+    "tests/verify_evidence.py": "d9ac4b45fef84cccaf1363631f2437e04fbc84616834f046f9999fd5b02a164a"
+  },
+  "note": "Code hashes collected after run; application source unchanged during evidence execution. No credentials included."
+}

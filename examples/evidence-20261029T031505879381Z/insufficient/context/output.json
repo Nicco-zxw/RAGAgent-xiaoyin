@@ -1,0 +1,29 @@
+{
+  "status": "insufficient_evidence",
+  "answer": "现有资料只写明“报销期限为30天”，未说明试用期员工是否适用该期限或另有不同规定，因此无法确认试用期员工的具体报销期限。",
+  "citations": [
+    {
+      "document_id": "D01",
+      "passage_id": "P01",
+      "version_date": "2026-01-01",
+      "quote": "报销期限为30天。"
+    }
+  ],
+  "gaps": [
+    "未检索到针对试用期员工报销期限的专门规定或适用范围说明。"
+  ],
+  "conflicts": [],
+  "follow_up_question": "是否有关于试用期员工报销期限的专门制度或条款可供补充？",
+  "steps": 5,
+  "mode": "remote",
+  "audit_enabled": true,
+  "model_calls": 6,
+  "usage": {
+    "prompt_tokens": 3935,
+    "completion_tokens": 1673,
+    "total_tokens": 5608,
+    "prompt_cache_hit_tokens": 2304,
+    "prompt_cache_miss_tokens": 1631
+  },
+  "elapsed_seconds": 13.641
+}

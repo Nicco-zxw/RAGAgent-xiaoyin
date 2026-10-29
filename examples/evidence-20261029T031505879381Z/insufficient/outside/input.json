@@ -1,0 +1,16 @@
+{
+  "question": "明天天气怎样？",
+  "history": [],
+  "data_source": "data/clear.json",
+  "data_sha256": "45b38c8cbbca8f5dfd1145565453c674e04bbc7abeef5feb604641b3e5be128b",
+  "fail_first": null,
+  "fail_always": null,
+  "max_steps": 10,
+  "audit_enabled": true,
+  "mode": "remote",
+  "model": "deepseek-flash",
+  "expected_statuses": [
+    "insufficient_evidence"
+  ],
+  "expected_text": null
+}

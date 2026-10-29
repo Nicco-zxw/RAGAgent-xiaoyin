@@ -1,0 +1,132 @@
+{
+  "version": "1.0",
+  "description": "合成验收数据，不代表企业真实政策。标准固定在运行前。机器判定仅检查必要条件，最终语义仍需人工审核。",
+  "cases": [
+    {
+      "id": "clear",
+      "data": "data/clear.json",
+      "question": "报销期限是多少天？",
+      "statuses": [
+        "answered"
+      ],
+      "required_text": [
+        "30"
+      ],
+      "required_sources": [
+        "D01"
+      ],
+      "max_steps": 10
+    },
+    {
+      "id": "materials_missing",
+      "data": "data/clear.json",
+      "question": "报销材料须从费用发生之日起多少天内提交？",
+      "statuses": [
+        "insufficient_evidence",
+        "needs_clarification"
+      ],
+      "require_gaps": true,
+      "max_steps": 10
+    },
+    {
+      "id": "materials_explicit",
+      "data": "data/materials_explicit.json",
+      "question": "报销材料须从费用发生之日起多少天内提交？",
+      "statuses": [
+        "answered"
+      ],
+      "required_text": [
+        "30"
+      ],
+      "required_sources": [
+        "M01"
+      ],
+      "max_steps": 10
+    },
+    {
+      "id": "conflict",
+      "data": "data/conflict.json",
+      "question": "报销期限多久？",
+      "statuses": [
+        "needs_clarification"
+      ],
+      "required_sources": [
+        "D01",
+        "D02"
+      ],
+      "unresolved_conflict": true,
+      "max_steps": 12
+    },
+    {
+      "id": "resolved",
+      "data": "data/resolved.json",
+      "question": "现行报销期限多久？",
+      "statuses": [
+        "answered"
+      ],
+      "required_text": [
+        "15"
+      ],
+      "required_sources": [
+        "D02",
+        "D03"
+      ],
+      "resolved_conflict": true,
+      "max_steps": 14
+    },
+    {
+      "id": "scoped",
+      "data": "data/scoped.json",
+      "question": "销售部员工报销期限是多少天？",
+      "statuses": [
+        "answered"
+      ],
+      "required_text": [
+        "30"
+      ],
+      "required_sources": [
+        "S01"
+      ],
+      "max_steps": 12
+    },
+    {
+      "id": "noise",
+      "data": "data/retrieval_noise.json",
+      "question": "员工报销材料最晚须在费用发生后多少天交？",
+      "statuses": [
+        "answered"
+      ],
+      "required_text": [
+        "30"
+      ],
+      "required_sources": [
+        "M01"
+      ],
+      "max_steps": 12
+    },
+    {
+      "id": "document_id",
+      "data": "data/retrieval_noise.json",
+      "question": "M01规定的报销材料期限是多少天？",
+      "statuses": [
+        "answered"
+      ],
+      "required_text": [
+        "30"
+      ],
+      "required_sources": [
+        "M01"
+      ],
+      "max_steps": 10
+    },
+    {
+      "id": "budget",
+      "data": "data/clear.json",
+      "question": "报销期限多久？",
+      "statuses": [
+        "budget_exceeded"
+      ],
+      "max_steps": 1
+    }
+  ]
+}

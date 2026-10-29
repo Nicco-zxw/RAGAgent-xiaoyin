@@ -1,0 +1,23 @@
+{
+  "status": "insufficient_evidence",
+  "answer": "当前企业知识库中没有与“天气预报”相关的资料，无法据此回答明天天气。该问题属于资料范围外的问题，不能凭常识作答。",
+  "citations": [],
+  "gaps": [
+    "知识库检索“天气 天气预报”无任何文档命中，缺少可适用的依据",
+    "问题涉及实时天气预报，超出企业知识文档范围"
+  ],
+  "conflicts": [],
+  "follow_up_question": "您是否想查询知识库内的其他企业事务问题？如需天气信息，请使用专门的天气服务。",
+  "steps": 2,
+  "mode": "remote",
+  "audit_enabled": true,
+  "model_calls": 3,
+  "usage": {
+    "prompt_tokens": 1268,
+    "completion_tokens": 1085,
+    "total_tokens": 2353,
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 756
+  },
+  "elapsed_seconds": 8.969
+}

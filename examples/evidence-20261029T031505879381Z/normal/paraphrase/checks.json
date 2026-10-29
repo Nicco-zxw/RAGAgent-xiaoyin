@@ -1,0 +1,12 @@
+{
+  "case": "paraphrase",
+  "group": "normal",
+  "path": "normal/paraphrase",
+  "checks": {
+    "expected_status": true,
+    "expected_text": true,
+    "real_model": true,
+    "has_citations": true
+  },
+  "passed": true
+}

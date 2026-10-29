@@ -1,0 +1,1466 @@
+{
+  "status": "completed",
+  "model": "deepseek-flash",
+  "benchmark_sha256": "32ca0f5b81df9fbfb4d62ba6403576547cd58ec73657eb4e98fae2661b42d818",
+  "requested_repeat": 2,
+  "cases": [
+    {
+      "case": "clear",
+      "repeat": 0,
+      "audit_enabled": true,
+      "passed": true,
+      "issues": [],
+      "retrieval_recall": 1.0,
+      "result": {
+        "status": "answered",
+        "answer": "根据公司制度，报销期限为30天。",
+        "citations": [
+          {
+            "document_id": "D01",
+            "passage_id": "P01",
+            "version_date": "2026-01-01",
+            "quote": "报销期限为30天。"
+          }
+        ],
+        "gaps": [],
+        "conflicts": [],
+        "follow_up_question": null,
+        "steps": 3,
+        "mode": "remote",
+        "audit_enabled": true,
+        "model_calls": 4,
+        "usage": {
+          "prompt_tokens": 2084,
+          "completion_tokens": 783,
+          "total_tokens": 2867,
+          "prompt_cache_hit_tokens": 896,
+          "prompt_cache_miss_tokens": 1188
+        },
+        "elapsed_seconds": 7.094
+      }
+    },
+    {
+      "case": "clear",
+      "repeat": 0,
+      "audit_enabled": false,
+      "passed": true,
+      "issues": [],
+      "retrieval_recall": 1.0,
+      "result": {
+        "status": "answered",
+        "answer": "报销期限为30天。",
+        "citations": [
+          {
+            "document_id": "D01",
+            "passage_id": "P01",
+            "version_date": "2026-01-01",
+            "quote": "报销期限为30天。"
+          }
+        ],
+        "gaps": [],
+        "conflicts": [],
+        "follow_up_question": null,
+        "steps": 3,
+        "mode": "remote",
+        "audit_enabled": false,
+        "model_calls": 3,
+        "usage": {
+          "prompt_tokens": 1521,
+          "completion_tokens": 459,
+          "total_tokens": 1980,
+          "prompt_cache_hit_tokens": 896,
+          "prompt_cache_miss_tokens": 625
+        },
+        "elapsed_seconds": 4.625
+      }
+    },
+    {
+      "case": "materials_missing",
+      "repeat": 0,
+      "audit_enabled": true,
+      "passed": true,
+      "issues": [],
+      "retrieval_recall": null,
+      "result": {
+        "status": "insufficient_evidence",
+        "answer": "现有资料仅规定“报销期限为30天”，未明确该期限的起算点是否为费用发生之日，也未明确是否指提交报销材料的期限，因此无法确定“报销材料须从费用发生之日起多少天内提交”。",
+        "citations": [
+          {
+            "document_id": "D01",
+            "passage_id": "P01",
+            "version_date": "2026-01-01",
+            "quote": "报销期限为30天。"
+          }
+        ],
+        "gaps": [
+          "原文未明确“报销期限”的起算点是否为费用发生之日。",
+          "原文未明确“报销期限”是否指提交报销材料的期限。"
+        ],
+        "conflicts": [],
+        "follow_up_question": "请确认“报销期限为30天”是否指提交报销材料的期限，以及该期限是否从费用发生之日起算。",
+        "steps": 6,
+        "mode": "remote",
+        "audit_enabled": true,
+        "model_calls": 8,
+        "usage": {
+          "prompt_tokens": 5517,
+          "completion_tokens": 2331,
+          "total_tokens": 7848,
+          "prompt_cache_hit_tokens": 2688,
+          "prompt_cache_miss_tokens": 2829
+        },
+        "elapsed_seconds": 17.843
+      }
+    },
+    {
+      "case": "materials_missing",
+      "repeat": 0,
+      "audit_enabled": false,
+      "passed": false,
+      "issues": [
+        "unexpected status"
+      ],
+      "retrieval_recall": null,
+      "result": {
+        "status": "answered",
+        "answer": "30天。资料原文表述为“报销期限为30天”，但该段未明确写出“自费用发生之日起”的起算表述。",
+        "citations": [
+          {
+            "document_id": "D01",
+            "passage_id": "P01",
+            "version_date": "2026-01-01",
+            "quote": "报销期限为30天。"
+          }
+        ],
+        "gaps": [
+          "原文未明确说明报销期限的起算日是否为费用发生之日，也未说明“报销材料提交”是否等同于“报销期限”。"
+        ],
+        "conflicts": [],
+        "follow_up_question": null,
+        "steps": 4,
+        "mode": "remote",
+        "audit_enabled": false,
+        "model_calls": 4,
+        "usage": {
+          "prompt_tokens": 2257,
+          "completion_tokens": 1141,
+          "total_tokens": 3398,
+          "prompt_cache_hit_tokens": 1408,
+          "prompt_cache_miss_tokens": 849
+        },
+        "elapsed_seconds": 8.656
+      }
+    },
+    {
+      "case": "materials_explicit",
+      "repeat": 0,
+      "audit_enabled": true,
+      "passed": true,
+      "issues": [],
+      "retrieval_recall": 1.0,
+      "result": {
+        "status": "answered",
+        "answer": "报销材料须自费用发生之日起30个自然日内提交。",
+        "citations": [
+          {
+            "document_id": "M01",
+            "passage_id": "P01",
+            "version_date": "2026-04-01",
+            "quote": "本合成测试制度适用于所有员工。报销材料须自费用发生之日起30个自然日内提交。这里的报销期限即材料提交期限。"
+          }
+        ],
+        "gaps": [],
+        "conflicts": [],
+        "follow_up_question": null,
+        "steps": 3,
+        "mode": "remote",
+        "audit_enabled": true,
+        "model_calls": 4,
+        "usage": {
+          "prompt_tokens": 2296,
+          "completion_tokens": 633,
+          "total_tokens": 2929,
+          "prompt_cache_hit_tokens": 1152,
+          "prompt_cache_miss_tokens": 1144
+        },
+        "elapsed_seconds": 6.187
+      }
+    },
+    {
+      "case": "materials_explicit",
+      "repeat": 0,
+      "audit_enabled": false,
+      "passed": true,
+      "issues": [],
+      "retrieval_recall": 1.0,
+      "result": {
+        "status": "answered",
+        "answer": "报销材料须自费用发生之日起30个自然日内提交。",
+        "citations": [
+          {
+            "document_id": "M01",
+            "passage_id": "P01",
+            "version_date": "2026-04-01",
+            "quote": "本合成测试制度适用于所有员工。报销材料须自费用发生之日起30个自然日内提交。这里的报销期限即材料提交期限。"
+          }
+        ],
+        "gaps": [],
+        "conflicts": [],
+        "follow_up_question": null,
+        "steps": 4,
+        "mode": "remote",
+        "audit_enabled": false,
+        "model_calls": 4,
+        "usage": {
+          "prompt_tokens": 2403,
+          "completion_tokens": 610,
+          "total_tokens": 3013,
+          "prompt_cache_hit_tokens": 1792,
+          "prompt_cache_miss_tokens": 611
+        },
+        "elapsed_seconds": 6.297
+      }
+    },
+    {
+      "case": "conflict",
+      "repeat": 0,
+      "audit_enabled": true,
+      "passed": true,
+      "issues": [],
+      "retrieval_recall": 1.0,
+      "result": {
+        "status": "needs_clarification",
+        "answer": "现有资料对报销期限存在冲突：D01规定为30天，D02规定为15天；两份原文均未提供适用范围或替代关系，补充检索也未找到废止、替代或优先级依据，因此无法确定应适用哪一个期限。",
+        "citations": [
+          {
+            "document_id": "D01",
+            "passage_id": "P01",
+            "version_date": "2026-01-01",
+            "quote": "报销期限为30天。"
+          },
+          {
+            "document_id": "D02",
+            "passage_id": "P01",
+            "version_date": "2026-02-01",
+            "quote": "报销期限为15天。"
+          }
+        ],
+        "gaps": [
+          "未找到适用范围、废止、替代或优先级依据"
+        ],
+        "conflicts": [
+          {
+            "topic": "报销期限",
+            "sources": [
+              "D01/P01",
+              "D02/P01"
+            ],
+            "resolved": false
+          }
+        ],
+        "follow_up_question": "请确认应适用哪份制度（D01的30天还是D02的15天），或提供文件适用范围、生效/废止及替代关系信息。",
+        "steps": 5,
+        "mode": "remote",
+        "audit_enabled": true,
+        "model_calls": 6,
+        "usage": {
+          "prompt_tokens": 4331,
+          "completion_tokens": 2261,
+          "total_tokens": 6592,
+          "prompt_cache_hit_tokens": 2432,
+          "prompt_cache_miss_tokens": 1899
+        },
+        "elapsed_seconds": 16.156
+      }
+    },
+    {
+      "case": "conflict",
+      "repeat": 0,
+      "audit_enabled": false,
+      "passed": true,
+      "issues": [],
+      "retrieval_recall": 1.0,
+      "result": {
+        "status": "needs_clarification",
+        "answer": "现有资料对报销期限规定不一致：D01规定为30天，D02规定为15天；未查到适用范围、废止、替代或优先级依据，无法确定应适用哪一个期限。",
+        "citations": [
+          {
+            "document_id": "D01",
+            "passage_id": "P01",
+            "version_date": "2026-01-01",
+            "quote": "报销期限为30天。"
+          },
+          {
+            "document_id": "D02",
+            "passage_id": "P01",
+            "version_date": "2026-02-01",
+            "quote": "报销期限为15天。"
+          }
+        ],
+        "gaps": [
+          "缺少两份规定各自的适用范围",
+          "缺少废止、替代或优先级依据"
+        ],
+        "conflicts": [
+          {
+            "topic": "报销期限",
+            "sources": [
+              "D01/P01",
+              "D02/P01"
+            ],
+            "resolved": false
+          }
+        ],
+        "follow_up_question": "请补充报销类型、所属主体或适用的制度文件，以便确定应适用30天还是15天的规定。",
+        "steps": 5,
+        "mode": "remote",
+        "audit_enabled": false,
+        "model_calls": 5,
+        "usage": {
+          "prompt_tokens": 3251,
+          "completion_tokens": 1207,
+          "total_tokens": 4458,
+          "prompt_cache_hit_tokens": 2304,
+          "prompt_cache_miss_tokens": 947
+        },
+        "elapsed_seconds": 9.609
+      }
+    },
+    {
+      "case": "resolved",
+      "repeat": 0,
+      "audit_enabled": true,
+      "passed": true,
+      "issues": [],
+      "retrieval_recall": 1.0,
+      "result": {
+        "status": "answered",
+        "answer": "现行报销期限为15天。D01规定的30天报销期限已被D02替代，不再适用。",
+        "citations": [
+          {
+            "document_id": "D03",
+            "passage_id": "P01",
+            "version_date": "2026-03-01",
+            "quote": "现行费用报销统一适用D02，报销期限为15天。D01关于报销期限30天的规定已被D02替代，不再适用。"
+          },
+          {
+            "document_id": "D02",
+            "passage_id": "P01",
+            "version_date": "2026-02-01",
+            "quote": "报销期限为15天。"
+          }
+        ],
+        "gaps": [],
+        "conflicts": [
+          {
+            "topic": "报销期限（30天 vs 15天）",
+            "sources": [
+              "D01/P01",
+              "D02/P01"
+            ],
+            "resolved": true,
+            "resolution_citations": [
+              {
+                "document_id": "D03",
+                "passage_id": "P01",
+                "version_date": "2026-03-01",
+                "quote": "现行费用报销统一适用D02，报销期限为15天。D01关于报销期限30天的规定已被D02替代，不再适用。"
+              },
+              {
+                "document_id": "D02",
+                "passage_id": "P01",
+                "version_date": "2026-02-01",
+                "quote": "报销期限为15天。"
+              }
+            ]
+          }
+        ],
+        "follow_up_question": null,
+        "steps": 9,
+        "mode": "remote",
+        "audit_enabled": true,
+        "model_calls": 10,
+        "usage": {
+          "prompt_tokens": 13085,
+          "completion_tokens": 6135,
+          "total_tokens": 19220,
+          "prompt_cache_hit_tokens": 8192,
+          "prompt_cache_miss_tokens": 4893
+        },
+        "elapsed_seconds": 38.547
+      }
+    },
+    {
+      "case": "resolved",
+      "repeat": 0,
+      "audit_enabled": false,
+      "passed": true,
+      "issues": [],
+      "retrieval_recall": 1.0,
+      "result": {
+        "status": "answered",
+        "answer": "现行报销期限为15天。D03/P01明确现行费用报销统一适用D02，且D01规定的30天已被D02替代、不再适用。",
+        "citations": [
+          {
+            "document_id": "D02",
+            "passage_id": "P01",
+            "version_date": "2026-02-01",
+            "quote": "报销期限为15天。"
+          },
+          {
+            "document_id": "D03",
+            "passage_id": "P01",
+            "version_date": "2026-03-01",
+            "quote": "现行费用报销统一适用D02，报销期限为15天。D01关于报销期限30天的规定已被D02替代，不再适用。"
+          }
+        ],
+        "gaps": [],
+        "conflicts": [
+          {
+            "topic": "报销期限是30天还是15天",
+            "sources": [
+              "D01/P01",
+              "D02/P01"
+            ],
+            "resolved": true,
+            "resolution_citations": [
+              {
+                "document_id": "D03",
+                "passage_id": "P01",
+                "version_date": "2026-03-01",
+                "quote": "现行费用报销统一适用D02，报销期限为15天。D01关于报销期限30天的规定已被D02替代，不再适用。"
+              },
+              {
+                "document_id": "D02",
+                "passage_id": "P01",
+                "version_date": "2026-02-01",
+                "quote": "报销期限为15天。"
+              }
+            ]
+          }
+        ],
+        "follow_up_question": null,
+        "steps": 6,
+        "mode": "remote",
+        "audit_enabled": false,
+        "model_calls": 6,
+        "usage": {
+          "prompt_tokens": 4673,
+          "completion_tokens": 2110,
+          "total_tokens": 6783,
+          "prompt_cache_hit_tokens": 3456,
+          "prompt_cache_miss_tokens": 1217
+        },
+        "elapsed_seconds": 14.937
+      }
+    },
+    {
+      "case": "scoped",
+      "repeat": 0,
+      "audit_enabled": true,
+      "passed": true,
+      "issues": [],
+      "retrieval_recall": 1.0,
+      "result": {
+        "status": "answered",
+        "answer": "销售部员工的报销期限为30天。",
+        "citations": [
+          {
+            "document_id": "S01",
+            "passage_id": "P01",
+            "version_date": "2026-01-01",
+            "quote": "销售部员工报销期限为30天，本条仅适用于销售部。"
+          }
+        ],
+        "gaps": [],
+        "conflicts": [],
+        "follow_up_question": "",
+        "steps": 3,
+        "mode": "remote",
+        "audit_enabled": true,
+        "model_calls": 4,
+        "usage": {
+          "prompt_tokens": 2494,
+          "completion_tokens": 718,
+          "total_tokens": 3212,
+          "prompt_cache_hit_tokens": 1152,
+          "prompt_cache_miss_tokens": 1342
+        },
+        "elapsed_seconds": 6.859
+      }
+    },
+    {
+      "case": "scoped",
+      "repeat": 0,
+      "audit_enabled": false,
+      "passed": true,
+      "issues": [],
+      "retrieval_recall": 1.0,
+      "result": {
+        "status": "answered",
+        "answer": "销售部员工报销期限为30天。",
+        "citations": [
+          {
+            "document_id": "S01",
+            "passage_id": "P01",
+            "version_date": "2026-01-01",
+            "quote": "销售部员工报销期限为30天，本条仅适用于销售部。"
+          }
+        ],
+        "gaps": [],
+        "conflicts": [],
+        "follow_up_question": null,
+        "steps": 3,
+        "mode": "remote",
+        "audit_enabled": false,
+        "model_calls": 3,
+        "usage": {
+          "prompt_tokens": 1771,
+          "completion_tokens": 603,
+          "total_tokens": 2374,
+          "prompt_cache_hit_tokens": 1152,
+          "prompt_cache_miss_tokens": 619
+        },
+        "elapsed_seconds": 5.765
+      }
+    },
+    {
+      "case": "noise",
+      "repeat": 0,
+      "audit_enabled": true,
+      "passed": true,
+      "issues": [],
+      "retrieval_recall": 1.0,
+      "result": {
+        "status": "answered",
+        "answer": "员工报销材料须自费用发生之日起30个自然日内提交。",
+        "citations": [
+          {
+            "document_id": "M01",
+            "passage_id": "P01",
+            "version_date": "2026-04-01",
+            "quote": "本合成测试制度适用于所有员工。报销材料须自费用发生之日起30个自然日内提交。这里的报销期限即材料提交期限。"
+          }
+        ],
+        "gaps": [],
+        "conflicts": [],
+        "follow_up_question": null,
+        "steps": 3,
+        "mode": "remote",
+        "audit_enabled": true,
+        "model_calls": 4,
+        "usage": {
+          "prompt_tokens": 2659,
+          "completion_tokens": 729,
+          "total_tokens": 3388,
+          "prompt_cache_hit_tokens": 1280,
+          "prompt_cache_miss_tokens": 1379
+        },
+        "elapsed_seconds": 6.938
+      }
+    },
+    {
+      "case": "noise",
+      "repeat": 0,
+      "audit_enabled": false,
+      "passed": true,
+      "issues": [],
+      "retrieval_recall": 1.0,
+      "result": {
+        "status": "answered",
+        "answer": "员工报销材料须自费用发生之日起30个自然日内提交，即最晚应在费用发生后30个自然日内交。",
+        "citations": [
+          {
+            "document_id": "M01",
+            "passage_id": "P01",
+            "version_date": "2026-04-01",
+            "quote": "本合成测试制度适用于所有员工。报销材料须自费用发生之日起30个自然日内提交。这里的报销期限即材料提交期限。"
+          }
+        ],
+        "gaps": [],
+        "conflicts": [],
+        "follow_up_question": "",
+        "steps": 3,
+        "mode": "remote",
+        "audit_enabled": false,
+        "model_calls": 3,
+        "usage": {
+          "prompt_tokens": 1852,
+          "completion_tokens": 594,
+          "total_tokens": 2446,
+          "prompt_cache_hit_tokens": 1280,
+          "prompt_cache_miss_tokens": 572
+        },
+        "elapsed_seconds": 4.89
+      }
+    },
+    {
+      "case": "document_id",
+      "repeat": 0,
+      "audit_enabled": true,
+      "passed": true,
+      "issues": [],
+      "retrieval_recall": 1.0,
+      "result": {
+        "status": "answered",
+        "answer": "M01规定，报销材料须自费用发生之日起30个自然日内提交。",
+        "citations": [
+          {
+            "document_id": "M01",
+            "passage_id": "P01",
+            "version_date": "2026-04-01",
+            "quote": "本合成测试制度适用于所有员工。报销材料须自费用发生之日起30个自然日内提交。这里的报销期限即材料提交期限。"
+          }
+        ],
+        "gaps": [],
+        "conflicts": [],
+        "follow_up_question": null,
+        "steps": 3,
+        "mode": "remote",
+        "audit_enabled": true,
+        "model_calls": 4,
+        "usage": {
+          "prompt_tokens": 2625,
+          "completion_tokens": 666,
+          "total_tokens": 3291,
+          "prompt_cache_hit_tokens": 1024,
+          "prompt_cache_miss_tokens": 1601
+        },
+        "elapsed_seconds": 6.156
+      }
+    },
+    {
+      "case": "document_id",
+      "repeat": 0,
+      "audit_enabled": false,
+      "passed": true,
+      "issues": [],
+      "retrieval_recall": 1.0,
+      "result": {
+        "status": "answered",
+        "answer": "M01规定：报销材料须自费用发生之日起30个自然日内提交，因此报销材料期限为30个自然日。",
+        "citations": [
+          {
+            "document_id": "M01",
+            "passage_id": "P01",
+            "version_date": "2026-04-01",
+            "quote": "本合成测试制度适用于所有员工。报销材料须自费用发生之日起30个自然日内提交。这里的报销期限即材料提交期限。"
+          }
+        ],
+        "gaps": [],
+        "conflicts": [],
+        "follow_up_question": null,
+        "steps": 3,
+        "mode": "remote",
+        "audit_enabled": false,
+        "model_calls": 3,
+        "usage": {
+          "prompt_tokens": 1830,
+          "completion_tokens": 567,
+          "total_tokens": 2397,
+          "prompt_cache_hit_tokens": 1024,
+          "prompt_cache_miss_tokens": 806
+        },
+        "elapsed_seconds": 5.391
+      }
+    },
+    {
+      "case": "budget",
+      "repeat": 0,
+      "audit_enabled": true,
+      "passed": true,
+      "issues": [],
+      "retrieval_recall": null,
+      "result": {
+        "status": "budget_exceeded",
+        "answer": "达到执行上限，任务尚未完成。",
+        "citations": [],
+        "gaps": [
+          "需要更多执行步骤或人工确认"
+        ],
+        "conflicts": [],
+        "follow_up_question": null,
+        "steps": 1,
+        "mode": "remote",
+        "audit_enabled": true,
+        "model_calls": 1,
+        "usage": {
+          "prompt_tokens": 408,
+          "completion_tokens": 178,
+          "total_tokens": 586,
+          "prompt_cache_hit_tokens": 256,
+          "prompt_cache_miss_tokens": 152
+        },
+        "elapsed_seconds": 1.719
+      }
+    },
+    {
+      "case": "budget",
+      "repeat": 0,
+      "audit_enabled": false,
+      "passed": true,
+      "issues": [],
+      "retrieval_recall": null,
+      "result": {
+        "status": "budget_exceeded",
+        "answer": "达到执行上限，任务尚未完成。",
+        "citations": [],
+        "gaps": [
+          "需要更多执行步骤或人工确认"
+        ],
+        "conflicts": [],
+        "follow_up_question": null,
+        "steps": 1,
+        "mode": "remote",
+        "audit_enabled": false,
+        "model_calls": 1,
+        "usage": {
+          "prompt_tokens": 408,
+          "completion_tokens": 157,
+          "total_tokens": 565,
+          "prompt_cache_hit_tokens": 256,
+          "prompt_cache_miss_tokens": 152
+        },
+        "elapsed_seconds": 1.406
+      }
+    },
+    {
+      "case": "clear",
+      "repeat": 1,
+      "audit_enabled": false,
+      "passed": true,
+      "issues": [],
+      "retrieval_recall": 1.0,
+      "result": {
+        "status": "answered",
+        "answer": "根据现行资料，报销期限为30天。",
+        "citations": [
+          {
+            "document_id": "D01",
+            "passage_id": "P01",
+            "version_date": "2026-01-01",
+            "quote": "报销期限为30天。"
+          }
+        ],
+        "gaps": [],
+        "conflicts": [],
+        "follow_up_question": null,
+        "steps": 3,
+        "mode": "remote",
+        "audit_enabled": false,
+        "model_calls": 3,
+        "usage": {
+          "prompt_tokens": 1511,
+          "completion_tokens": 801,
+          "total_tokens": 2312,
+          "prompt_cache_hit_tokens": 896,
+          "prompt_cache_miss_tokens": 615
+        },
+        "elapsed_seconds": 6.484
+      }
+    },
+    {
+      "case": "clear",
+      "repeat": 1,
+      "audit_enabled": true,
+      "passed": true,
+      "issues": [],
+      "retrieval_recall": 1.0,
+      "result": {
+        "status": "answered",
+        "answer": "报销期限为30天。",
+        "citations": [
+          {
+            "document_id": "D01",
+            "passage_id": "P01",
+            "version_date": "2026-01-01",
+            "quote": "报销期限为30天。"
+          }
+        ],
+        "gaps": [],
+        "conflicts": [],
+        "follow_up_question": null,
+        "steps": 3,
+        "mode": "remote",
+        "audit_enabled": true,
+        "model_calls": 4,
+        "usage": {
+          "prompt_tokens": 2071,
+          "completion_tokens": 673,
+          "total_tokens": 2744,
+          "prompt_cache_hit_tokens": 896,
+          "prompt_cache_miss_tokens": 1175
+        },
+        "elapsed_seconds": 6.0
+      }
+    },
+    {
+      "case": "materials_missing",
+      "repeat": 1,
+      "audit_enabled": false,
+      "passed": false,
+      "issues": [
+        "unexpected status"
+      ],
+      "retrieval_recall": null,
+      "result": {
+        "status": "answered",
+        "answer": "已读制度规定报销期限为30天；但原文未明确该期限是否自费用发生之日起算。",
+        "citations": [
+          {
+            "document_id": "D01",
+            "passage_id": "P01",
+            "version_date": "2026-01-01",
+            "quote": "报销期限为30天。"
+          }
+        ],
+        "gaps": [
+          "原文仅规定“报销期限为30天”，未明确起算日是否为费用发生之日。"
+        ],
+        "conflicts": [],
+        "follow_up_question": "请确认报销期限是否自费用发生之日起算。",
+        "steps": 5,
+        "mode": "remote",
+        "audit_enabled": false,
+        "model_calls": 5,
+        "usage": {
+          "prompt_tokens": 3087,
+          "completion_tokens": 1914,
+          "total_tokens": 5001,
+          "prompt_cache_hit_tokens": 2176,
+          "prompt_cache_miss_tokens": 911
+        },
+        "elapsed_seconds": 14.188
+      }
+    },
+    {
+      "case": "materials_missing",
+      "repeat": 1,
+      "audit_enabled": true,
+      "passed": true,
+      "issues": [],
+      "retrieval_recall": null,
+      "result": {
+        "status": "insufficient_evidence",
+        "answer": "现有原文仅写明“报销期限为30天”，未说明该期限自费用发生之日起算，也未明确是否针对提交报销材料，因此无法据此确认“费用发生之日起多少天内提交”。",
+        "citations": [
+          {
+            "document_id": "D01",
+            "passage_id": "P01",
+            "version_date": "2026-01-01",
+            "quote": "报销期限为30天。"
+          }
+        ],
+        "gaps": [
+          "缺少关于报销期限起算日的明确规定",
+          "缺少“提交报销材料”与“报销期限”关系的明确规定"
+        ],
+        "conflicts": [],
+        "follow_up_question": "请确认报销期限是否自费用发生之日起算，以及该期限是否适用于提交报销材料。",
+        "steps": 5,
+        "mode": "remote",
+        "audit_enabled": true,
+        "model_calls": 7,
+        "usage": {
+          "prompt_tokens": 4711,
+          "completion_tokens": 2526,
+          "total_tokens": 7237,
+          "prompt_cache_hit_tokens": 2045,
+          "prompt_cache_miss_tokens": 2666
+        },
+        "elapsed_seconds": 17.579
+      }
+    },
+    {
+      "case": "materials_explicit",
+      "repeat": 1,
+      "audit_enabled": false,
+      "passed": true,
+      "issues": [],
+      "retrieval_recall": 1.0,
+      "result": {
+        "status": "answered",
+        "answer": "报销材料须自费用发生之日起30个自然日内提交。",
+        "citations": [
+          {
+            "document_id": "M01",
+            "passage_id": "P01",
+            "version_date": "2026-04-01",
+            "quote": "本合成测试制度适用于所有员工。报销材料须自费用发生之日起30个自然日内提交。这里的报销期限即材料提交期限。"
+          }
+        ],
+        "gaps": [],
+        "conflicts": [],
+        "follow_up_question": null,
+        "steps": 3,
+        "mode": "remote",
+        "audit_enabled": false,
+        "model_calls": 3,
+        "usage": {
+          "prompt_tokens": 1614,
+          "completion_tokens": 558,
+          "total_tokens": 2172,
+          "prompt_cache_hit_tokens": 1152,
+          "prompt_cache_miss_tokens": 462
+        },
+        "elapsed_seconds": 5.656
+      }
+    },
+    {
+      "case": "materials_explicit",
+      "repeat": 1,
+      "audit_enabled": true,
+      "passed": true,
+      "issues": [],
+      "retrieval_recall": 1.0,
+      "result": {
+        "status": "answered",
+        "answer": "根据现行规定，报销材料须自费用发生之日起30个自然日内提交。这里所说的报销期限，就是报销材料的提交期限。",
+        "citations": [
+          {
+            "document_id": "M01",
+            "passage_id": "P01",
+            "version_date": "2026-04-01",
+            "quote": "本合成测试制度适用于所有员工。报销材料须自费用发生之日起30个自然日内提交。这里的报销期限即材料提交期限。"
+          }
+        ],
+        "gaps": [],
+        "conflicts": [],
+        "follow_up_question": null,
+        "steps": 4,
+        "mode": "remote",
+        "audit_enabled": true,
+        "model_calls": 5,
+        "usage": {
+          "prompt_tokens": 3038,
+          "completion_tokens": 1052,
+          "total_tokens": 4090,
+          "prompt_cache_hit_tokens": 1664,
+          "prompt_cache_miss_tokens": 1374
+        },
+        "elapsed_seconds": 8.594
+      }
+    },
+    {
+      "case": "conflict",
+      "repeat": 1,
+      "audit_enabled": false,
+      "passed": true,
+      "issues": [],
+      "retrieval_recall": 1.0,
+      "result": {
+        "status": "needs_clarification",
+        "answer": "现有资料对报销期限存在不同规定：D01规定为30天，D02规定为15天。尚未查到适用范围、废止、替代或优先级依据，因此不能直接确定适用哪一个期限。请补充说明适用制度或业务场景。",
+        "citations": [
+          {
+            "document_id": "D01",
+            "passage_id": "P01",
+            "version_date": "2026-01-01",
+            "quote": "报销期限为30天。"
+          },
+          {
+            "document_id": "D02",
+            "passage_id": "P01",
+            "version_date": "2026-02-01",
+            "quote": "报销期限为15天。"
+          }
+        ],
+        "gaps": [
+          "缺少D01与D02的适用范围、废止、替代或优先级依据。"
+        ],
+        "conflicts": [
+          {
+            "topic": "报销期限",
+            "sources": [
+              "D01/P01",
+              "D02/P01"
+            ],
+            "resolved": false
+          }
+        ],
+        "follow_up_question": "请确认本次报销适用哪一份制度，或补充该制度/业务场景的适用范围说明。",
+        "steps": 5,
+        "mode": "remote",
+        "audit_enabled": false,
+        "model_calls": 5,
+        "usage": {
+          "prompt_tokens": 3217,
+          "completion_tokens": 1084,
+          "total_tokens": 4301,
+          "prompt_cache_hit_tokens": 2176,
+          "prompt_cache_miss_tokens": 1041
+        },
+        "elapsed_seconds": 8.953
+      }
+    },
+    {
+      "case": "conflict",
+      "repeat": 1,
+      "audit_enabled": true,
+      "passed": true,
+      "issues": [],
+      "retrieval_recall": 1.0,
+      "result": {
+        "status": "needs_clarification",
+        "answer": "现有资料对报销期限存在不一致规定：D01（2026-01-01）规定为30天，D02（2026-02-01）规定为15天。两份原文均未载明适用范围、废止或替代关系，补充检索也未找到优先级依据，因此不能仅按日期新旧擅自确定适用哪一条。请补充你适用的制度版本、所属部门或费用发生期间，我再据此确认。",
+        "citations": [
+          {
+            "document_id": "D01",
+            "passage_id": "P01",
+            "version_date": "2026-01-01",
+            "quote": "报销期限为30天。"
+          },
+          {
+            "document_id": "D02",
+            "passage_id": "P01",
+            "version_date": "2026-02-01",
+            "quote": "报销期限为15天。"
+          }
+        ],
+        "gaps": [
+          "两份规定均缺少适用范围、废止或替代条款",
+          "补充检索未找到优先级或适用范围的依据"
+        ],
+        "conflicts": [
+          {
+            "topic": "报销期限",
+            "sources": [
+              "D01/P01",
+              "D02/P01"
+            ],
+            "resolved": false
+          }
+        ],
+        "follow_up_question": "请确认你适用哪份制度（或所属部门、费用发生期间），以便判定报销期限是30天还是15天。",
+        "steps": 5,
+        "mode": "remote",
+        "audit_enabled": true,
+        "model_calls": 6,
+        "usage": {
+          "prompt_tokens": 4328,
+          "completion_tokens": 1821,
+          "total_tokens": 6149,
+          "prompt_cache_hit_tokens": 2300,
+          "prompt_cache_miss_tokens": 2028
+        },
+        "elapsed_seconds": 13.422
+      }
+    },
+    {
+      "case": "resolved",
+      "repeat": 1,
+      "audit_enabled": false,
+      "passed": true,
+      "issues": [],
+      "retrieval_recall": 1.0,
+      "result": {
+        "status": "answered",
+        "answer": "现行报销期限为15天。D03明确规定现行费用报销统一适用D02，且D01关于30天的规定已被D02替代、不再适用；D02明确报销期限为15天。",
+        "citations": [
+          {
+            "document_id": "D03",
+            "passage_id": "P01",
+            "version_date": "2026-03-01",
+            "quote": "现行费用报销统一适用D02，报销期限为15天。D01关于报销期限30天的规定已被D02替代，不再适用。"
+          },
+          {
+            "document_id": "D02",
+            "passage_id": "P01",
+            "version_date": "2026-02-01",
+            "quote": "报销期限为15天。"
+          }
+        ],
+        "gaps": [],
+        "conflicts": [
+          {
+            "topic": "报销期限应为30天还是15天",
+            "sources": [
+              "D01/P01",
+              "D02/P01"
+            ],
+            "resolved": true,
+            "resolution_citations": [
+              {
+                "document_id": "D03",
+                "passage_id": "P01",
+                "version_date": "2026-03-01",
+                "quote": "现行费用报销统一适用D02，报销期限为15天。D01关于报销期限30天的规定已被D02替代，不再适用。"
+              },
+              {
+                "document_id": "D02",
+                "passage_id": "P01",
+                "version_date": "2026-02-01",
+                "quote": "报销期限为15天。"
+              }
+            ]
+          }
+        ],
+        "follow_up_question": null,
+        "steps": 10,
+        "mode": "remote",
+        "audit_enabled": false,
+        "model_calls": 10,
+        "usage": {
+          "prompt_tokens": 12132,
+          "completion_tokens": 4339,
+          "total_tokens": 16471,
+          "prompt_cache_hit_tokens": 9472,
+          "prompt_cache_miss_tokens": 2660
+        },
+        "elapsed_seconds": 28.906
+      }
+    },
+    {
+      "case": "resolved",
+      "repeat": 1,
+      "audit_enabled": true,
+      "passed": true,
+      "issues": [],
+      "retrieval_recall": 1.0,
+      "result": {
+        "status": "answered",
+        "answer": "现行报销期限为15天。D03明确现行费用报销统一适用D02，并说明D01关于报销期限30天的规定已被D02替代、不再适用。",
+        "citations": [
+          {
+            "document_id": "D02",
+            "passage_id": "P01",
+            "version_date": "2026-02-01",
+            "quote": "报销期限为15天。"
+          },
+          {
+            "document_id": "D03",
+            "passage_id": "P01",
+            "version_date": "2026-03-01",
+            "quote": "现行费用报销统一适用D02，报销期限为15天。D01关于报销期限30天的规定已被D02替代，不再适用。"
+          }
+        ],
+        "gaps": [],
+        "conflicts": [
+          {
+            "topic": "报销期限",
+            "sources": [
+              "D01/P01",
+              "D02/P01"
+            ],
+            "resolved": true,
+            "resolution_citations": [
+              {
+                "document_id": "D03",
+                "passage_id": "P01",
+                "version_date": "2026-03-01",
+                "quote": "现行费用报销统一适用D02，报销期限为15天。D01关于报销期限30天的规定已被D02替代，不再适用。"
+              },
+              {
+                "document_id": "D02",
+                "passage_id": "P01",
+                "version_date": "2026-02-01",
+                "quote": "报销期限为15天。"
+              }
+            ]
+          }
+        ],
+        "follow_up_question": null,
+        "steps": 8,
+        "mode": "remote",
+        "audit_enabled": true,
+        "model_calls": 9,
+        "usage": {
+          "prompt_tokens": 10143,
+          "completion_tokens": 4578,
+          "total_tokens": 14721,
+          "prompt_cache_hit_tokens": 5888,
+          "prompt_cache_miss_tokens": 4255
+        },
+        "elapsed_seconds": 29.859
+      }
+    },
+    {
+      "case": "scoped",
+      "repeat": 1,
+      "audit_enabled": false,
+      "passed": true,
+      "issues": [],
+      "retrieval_recall": 1.0,
+      "result": {
+        "status": "answered",
+        "answer": "销售部员工的报销期限为30天。",
+        "citations": [
+          {
+            "document_id": "S01",
+            "passage_id": "P01",
+            "version_date": "2026-01-01",
+            "quote": "销售部员工报销期限为30天，本条仅适用于销售部。"
+          }
+        ],
+        "gaps": [],
+        "conflicts": [],
+        "follow_up_question": null,
+        "steps": 3,
+        "mode": "remote",
+        "audit_enabled": false,
+        "model_calls": 3,
+        "usage": {
+          "prompt_tokens": 1775,
+          "completion_tokens": 470,
+          "total_tokens": 2245,
+          "prompt_cache_hit_tokens": 1152,
+          "prompt_cache_miss_tokens": 623
+        },
+        "elapsed_seconds": 4.125
+      }
+    },
+    {
+      "case": "scoped",
+      "repeat": 1,
+      "audit_enabled": true,
+      "passed": true,
+      "issues": [],
+      "retrieval_recall": 1.0,
+      "result": {
+        "status": "answered",
+        "answer": "销售部员工的报销期限为30天；该规定仅适用于销售部。",
+        "citations": [
+          {
+            "document_id": "S01",
+            "passage_id": "P01",
+            "version_date": "2026-01-01",
+            "quote": "销售部员工报销期限为30天，本条仅适用于销售部。"
+          }
+        ],
+        "gaps": [],
+        "conflicts": [],
+        "follow_up_question": null,
+        "steps": 3,
+        "mode": "remote",
+        "audit_enabled": true,
+        "model_calls": 4,
+        "usage": {
+          "prompt_tokens": 2507,
+          "completion_tokens": 868,
+          "total_tokens": 3375,
+          "prompt_cache_hit_tokens": 1152,
+          "prompt_cache_miss_tokens": 1355
+        },
+        "elapsed_seconds": 7.703
+      }
+    },
+    {
+      "case": "noise",
+      "repeat": 1,
+      "audit_enabled": false,
+      "passed": true,
+      "issues": [],
+      "retrieval_recall": 1.0,
+      "result": {
+        "status": "answered",
+        "answer": "员工报销材料须自费用发生之日起30个自然日内提交，即最晚为费用发生后第30个自然日。",
+        "citations": [
+          {
+            "document_id": "M01",
+            "passage_id": "P01",
+            "version_date": "2026-04-01",
+            "quote": "本合成测试制度适用于所有员工。报销材料须自费用发生之日起30个自然日内提交。这里的报销期限即材料提交期限。"
+          }
+        ],
+        "gaps": [],
+        "conflicts": [],
+        "follow_up_question": null,
+        "steps": 3,
+        "mode": "remote",
+        "audit_enabled": false,
+        "model_calls": 3,
+        "usage": {
+          "prompt_tokens": 1856,
+          "completion_tokens": 634,
+          "total_tokens": 2490,
+          "prompt_cache_hit_tokens": 1280,
+          "prompt_cache_miss_tokens": 576
+        },
+        "elapsed_seconds": 5.265
+      }
+    },
+    {
+      "case": "noise",
+      "repeat": 1,
+      "audit_enabled": true,
+      "passed": true,
+      "issues": [],
+      "retrieval_recall": 1.0,
+      "result": {
+        "status": "answered",
+        "answer": "员工报销材料最晚须自费用发生之日起30个自然日内提交。",
+        "citations": [
+          {
+            "document_id": "M01",
+            "passage_id": "P01",
+            "version_date": "2026-04-01",
+            "quote": "本合成测试制度适用于所有员工。报销材料须自费用发生之日起30个自然日内提交。这里的报销期限即材料提交期限。"
+          }
+        ],
+        "gaps": [],
+        "conflicts": [],
+        "follow_up_question": null,
+        "steps": 3,
+        "mode": "remote",
+        "audit_enabled": true,
+        "model_calls": 4,
+        "usage": {
+          "prompt_tokens": 2661,
+          "completion_tokens": 906,
+          "total_tokens": 3567,
+          "prompt_cache_hit_tokens": 1408,
+          "prompt_cache_miss_tokens": 1253
+        },
+        "elapsed_seconds": 7.578
+      }
+    },
+    {
+      "case": "document_id",
+      "repeat": 1,
+      "audit_enabled": false,
+      "passed": true,
+      "issues": [],
+      "retrieval_recall": 1.0,
+      "result": {
+        "status": "answered",
+        "answer": "M01规定的报销材料期限为自费用发生之日起30个自然日内提交。",
+        "citations": [
+          {
+            "document_id": "M01",
+            "passage_id": "P01",
+            "version_date": "2026-04-01",
+            "quote": "本合成测试制度适用于所有员工。报销材料须自费用发生之日起30个自然日内提交。这里的报销期限即材料提交期限。"
+          }
+        ],
+        "gaps": [],
+        "conflicts": [],
+        "follow_up_question": null,
+        "steps": 3,
+        "mode": "remote",
+        "audit_enabled": false,
+        "model_calls": 3,
+        "usage": {
+          "prompt_tokens": 1832,
+          "completion_tokens": 446,
+          "total_tokens": 2278,
+          "prompt_cache_hit_tokens": 1024,
+          "prompt_cache_miss_tokens": 808
+        },
+        "elapsed_seconds": 4.062
+      }
+    },
+    {
+      "case": "document_id",
+      "repeat": 1,
+      "audit_enabled": true,
+      "passed": true,
+      "issues": [],
+      "retrieval_recall": 1.0,
+      "result": {
+        "status": "answered",
+        "answer": "M01规定：报销材料须自费用发生之日起30个自然日内提交；这里的报销期限即材料提交期限。",
+        "citations": [
+          {
+            "document_id": "M01",
+            "passage_id": "P01",
+            "version_date": "2026-04-01",
+            "quote": "本合成测试制度适用于所有员工。报销材料须自费用发生之日起30个自然日内提交。这里的报销期限即材料提交期限。"
+          }
+        ],
+        "gaps": [],
+        "conflicts": [],
+        "follow_up_question": null,
+        "steps": 3,
+        "mode": "remote",
+        "audit_enabled": true,
+        "model_calls": 4,
+        "usage": {
+          "prompt_tokens": 2636,
+          "completion_tokens": 742,
+          "total_tokens": 3378,
+          "prompt_cache_hit_tokens": 1403,
+          "prompt_cache_miss_tokens": 1233
+        },
+        "elapsed_seconds": 6.328
+      }
+    },
+    {
+      "case": "budget",
+      "repeat": 1,
+      "audit_enabled": false,
+      "passed": true,
+      "issues": [],
+      "retrieval_recall": null,
+      "result": {
+        "status": "budget_exceeded",
+        "answer": "达到执行上限，任务尚未完成。",
+        "citations": [],
+        "gaps": [
+          "需要更多执行步骤或人工确认"
+        ],
+        "conflicts": [],
+        "follow_up_question": null,
+        "steps": 1,
+        "mode": "remote",
+        "audit_enabled": false,
+        "model_calls": 1,
+        "usage": {
+          "prompt_tokens": 408,
+          "completion_tokens": 132,
+          "total_tokens": 540,
+          "prompt_cache_hit_tokens": 256,
+          "prompt_cache_miss_tokens": 152
+        },
+        "elapsed_seconds": 1.922
+      }
+    },
+    {
+      "case": "budget",
+      "repeat": 1,
+      "audit_enabled": true,
+      "passed": true,
+      "issues": [],
+      "retrieval_recall": null,
+      "result": {
+        "status": "budget_exceeded",
+        "answer": "达到执行上限，任务尚未完成。",
+        "citations": [],
+        "gaps": [
+          "需要更多执行步骤或人工确认"
+        ],
+        "conflicts": [],
+        "follow_up_question": null,
+        "steps": 1,
+        "mode": "remote",
+        "audit_enabled": true,
+        "model_calls": 1,
+        "usage": {
+          "prompt_tokens": 408,
+          "completion_tokens": 156,
+          "total_tokens": 564,
+          "prompt_cache_hit_tokens": 256,
+          "prompt_cache_miss_tokens": 152
+        },
+        "elapsed_seconds": 1.766
+      }
+    }
+  ],
+  "not_run": [],
+  "elapsed_seconds": 348.078,
+  "audit_on": {
+    "runs": 18,
+    "passed": 18,
+    "model_errors": 0,
+    "model_calls": 89,
+    "reported_tokens": 95758,
+    "total_seconds": 206.328
+  },
+  "audit_off": {
+    "runs": 18,
+    "passed": 16,
+    "model_errors": 0,
+    "model_calls": 68,
+    "reported_tokens": 65224,
+    "total_seconds": 141.137
+  }
+}

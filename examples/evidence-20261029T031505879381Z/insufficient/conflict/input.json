@@ -1,0 +1,16 @@
+{
+  "question": "报销期限多久？",
+  "history": [],
+  "data_source": "data/conflict.json",
+  "data_sha256": "8acd61fe8842ea9dd8a926122285d014274b24c10b663409b756fcf316a9f676",
+  "fail_first": null,
+  "fail_always": null,
+  "max_steps": 12,
+  "audit_enabled": true,
+  "mode": "remote",
+  "model": "deepseek-flash",
+  "expected_statuses": [
+    "needs_clarification"
+  ],
+  "expected_text": null
+}

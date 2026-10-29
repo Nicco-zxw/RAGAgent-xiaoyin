@@ -1,0 +1,44 @@
+{
+  "status": "needs_clarification",
+  "answer": "现有资料中存在冲突：D01规定报销期限为30天，D02规定为15天；两份原文均未提供适用范围、废止或替代条款，无法仅凭日期判断应适用哪一规定。",
+  "citations": [
+    {
+      "document_id": "D01",
+      "passage_id": "P01",
+      "version_date": "2026-01-01",
+      "quote": "报销期限为30天。"
+    },
+    {
+      "document_id": "D02",
+      "passage_id": "P01",
+      "version_date": "2026-02-01",
+      "quote": "报销期限为15天。"
+    }
+  ],
+  "gaps": [
+    "两份规定均未提供适用范围、废止或替代条款，无法确定应适用哪一报销期限。"
+  ],
+  "conflicts": [
+    {
+      "topic": "报销期限",
+      "sources": [
+        "D01/P01",
+        "D02/P01"
+      ],
+      "resolved": false
+    }
+  ],
+  "follow_up_question": "请问您所在主体或费用发生时间适用哪份制度？是否有其他关于适用范围、废止或替代关系的规定？",
+  "steps": 5,
+  "mode": "remote",
+  "audit_enabled": true,
+  "model_calls": 6,
+  "usage": {
+    "prompt_tokens": 4292,
+    "completion_tokens": 2457,
+    "total_tokens": 6749,
+    "prompt_cache_hit_tokens": 2300,
+    "prompt_cache_miss_tokens": 1992
+  },
+  "elapsed_seconds": 18.062
+}

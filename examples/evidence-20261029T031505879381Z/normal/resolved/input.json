@@ -1,0 +1,16 @@
+{
+  "question": "现行报销期限多久？",
+  "history": [],
+  "data_source": "data/resolved.json",
+  "data_sha256": "1727c6ec8f10d57002d2b42aedc355d1276cdc19612ef9e58e821751aba5526d",
+  "fail_first": null,
+  "fail_always": null,
+  "max_steps": 14,
+  "audit_enabled": true,
+  "mode": "remote",
+  "model": "deepseek-flash",
+  "expected_statuses": [
+    "answered"
+  ],
+  "expected_text": "15"
+}

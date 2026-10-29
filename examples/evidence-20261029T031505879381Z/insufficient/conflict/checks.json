@@ -1,0 +1,14 @@
+{
+  "case": "conflict",
+  "group": "insufficient",
+  "path": "insufficient/conflict",
+  "checks": {
+    "expected_status": true,
+    "expected_text": true,
+    "real_model": true,
+    "two_sources": true,
+    "unresolved": true,
+    "question": true
+  },
+  "passed": true
+}

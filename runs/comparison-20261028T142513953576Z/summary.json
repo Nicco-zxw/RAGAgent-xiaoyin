@@ -1,0 +1,206 @@
+{
+  "status": "prepared_not_executed",
+  "model": "deepseek-flash",
+  "benchmark_sha256": "32ca0f5b81df9fbfb4d62ba6403576547cd58ec73657eb4e98fae2661b42d818",
+  "requested_repeat": 2,
+  "cases": [],
+  "not_run": [
+    {
+      "repeat": 0,
+      "case": "clear",
+      "audit_enabled": true
+    },
+    {
+      "repeat": 0,
+      "case": "clear",
+      "audit_enabled": false
+    },
+    {
+      "repeat": 0,
+      "case": "materials_missing",
+      "audit_enabled": true
+    },
+    {
+      "repeat": 0,
+      "case": "materials_missing",
+      "audit_enabled": false
+    },
+    {
+      "repeat": 0,
+      "case": "materials_explicit",
+      "audit_enabled": true
+    },
+    {
+      "repeat": 0,
+      "case": "materials_explicit",
+      "audit_enabled": false
+    },
+    {
+      "repeat": 0,
+      "case": "conflict",
+      "audit_enabled": true
+    },
+    {
+      "repeat": 0,
+      "case": "conflict",
+      "audit_enabled": false
+    },
+    {
+      "repeat": 0,
+      "case": "resolved",
+      "audit_enabled": true
+    },
+    {
+      "repeat": 0,
+      "case": "resolved",
+      "audit_enabled": false
+    },
+    {
+      "repeat": 0,
+      "case": "scoped",
+      "audit_enabled": true
+    },
+    {
+      "repeat": 0,
+      "case": "scoped",
+      "audit_enabled": false
+    },
+    {
+      "repeat": 0,
+      "case": "noise",
+      "audit_enabled": true
+    },
+    {
+      "repeat": 0,
+      "case": "noise",
+      "audit_enabled": false
+    },
+    {
+      "repeat": 0,
+      "case": "document_id",
+      "audit_enabled": true
+    },
+    {
+      "repeat": 0,
+      "case": "document_id",
+      "audit_enabled": false
+    },
+    {
+      "repeat": 0,
+      "case": "budget",
+      "audit_enabled": true
+    },
+    {
+      "repeat": 0,
+      "case": "budget",
+      "audit_enabled": false
+    },
+    {
+      "repeat": 1,
+      "case": "clear",
+      "audit_enabled": false
+    },
+    {
+      "repeat": 1,
+      "case": "clear",
+      "audit_enabled": true
+    },
+    {
+      "repeat": 1,
+      "case": "materials_missing",
+      "audit_enabled": false
+    },
+    {
+      "repeat": 1,
+      "case": "materials_missing",
+      "audit_enabled": true
+    },
+    {
+      "repeat": 1,
+      "case": "materials_explicit",
+      "audit_enabled": false
+    },
+    {
+      "repeat": 1,
+      "case": "materials_explicit",
+      "audit_enabled": true
+    },
+    {
+      "repeat": 1,
+      "case": "conflict",
+      "audit_enabled": false
+    },
+    {
+      "repeat": 1,
+      "case": "conflict",
+      "audit_enabled": true
+    },
+    {
+      "repeat": 1,
+      "case": "resolved",
+      "audit_enabled": false
+    },
+    {
+      "repeat": 1,
+      "case": "resolved",
+      "audit_enabled": true
+    },
+    {
+      "repeat": 1,
+      "case": "scoped",
+      "audit_enabled": false
+    },
+    {
+      "repeat": 1,
+      "case": "scoped",
+      "audit_enabled": true
+    },
+    {
+      "repeat": 1,
+      "case": "noise",
+      "audit_enabled": false
+    },
+    {
+      "repeat": 1,
+      "case": "noise",
+      "audit_enabled": true
+    },
+    {
+      "repeat": 1,
+      "case": "document_id",
+      "audit_enabled": false
+    },
+    {
+      "repeat": 1,
+      "case": "document_id",
+      "audit_enabled": true
+    },
+    {
+      "repeat": 1,
+      "case": "budget",
+      "audit_enabled": false
+    },
+    {
+      "repeat": 1,
+      "case": "budget",
+      "audit_enabled": true
+    }
+  ],
+  "elapsed_seconds": 0.0,
+  "audit_on": {
+    "runs": 0,
+    "passed": 0,
+    "model_errors": 0,
+    "model_calls": 0,
+    "reported_tokens": 0,
+    "total_seconds": 0
+  },
+  "audit_off": {
+    "runs": 0,
+    "passed": 0,
+    "model_errors": 0,
+    "model_calls": 0,
+    "reported_tokens": 0,
+    "total_seconds": 0
+  }
+}

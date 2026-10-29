@@ -1,0 +1,35 @@
+[
+  {
+    "document_id": "D01",
+    "version_date": "2026-01-01",
+    "title": "费用报销制度",
+    "passages": [
+      {
+        "passage_id": "P01",
+        "text": "报销期限为30天。"
+      }
+    ]
+  },
+  {
+    "document_id": "D02",
+    "version_date": "2026-02-01",
+    "title": "费用报销制度",
+    "passages": [
+      {
+        "passage_id": "P01",
+        "text": "报销期限为15天。"
+      }
+    ]
+  },
+  {
+    "document_id": "D03",
+    "version_date": "2026-03-01",
+    "title": "报销制度替代与适用说明",
+    "passages": [
+      {
+        "passage_id": "P01",
+        "text": "现行费用报销统一适用D02，报销期限为15天。D01关于报销期限30天的规定已被D02替代，不再适用。"
+      }
+    ]
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "case": "changed",
+  "group": "normal",
+  "path": "normal/changed",
+  "checks": {
+    "expected_status": true,
+    "expected_text": true,
+    "real_model": true,
+    "has_citations": true
+  },
+  "passed": true
+}

@@ -1,0 +1,63 @@
+{
+  "cases": [
+    {
+      "passed": true,
+      "result": {
+        "status": "answered",
+        "answer": "根据现行规定，报销期限为30天。",
+        "citations": [
+          {
+            "document_id": "D01",
+            "passage_id": "P01",
+            "version_date": "2026-01-01",
+            "quote": "报销期限为30天。"
+          }
+        ],
+        "gaps": [],
+        "conflicts": [],
+        "follow_up_question": "请问您要报销的是哪一类费用，以及费用发生日期是哪天？我可以帮您核对是否仍在30天期限内。",
+        "steps": 3,
+        "mode": "remote",
+        "model_calls": 4,
+        "usage": {
+          "prompt_tokens": 2114,
+          "completion_tokens": 792,
+          "total_tokens": 2906,
+          "prompt_cache_hit_tokens": 896,
+          "prompt_cache_miss_tokens": 1218
+        },
+        "elapsed_seconds": 8.125
+      }
+    },
+    {
+      "passed": true,
+      "result": {
+        "status": "answered",
+        "answer": "报销期限为30天。",
+        "citations": [
+          {
+            "document_id": "D01",
+            "passage_id": "P01",
+            "version_date": "2026-01-01",
+            "quote": "报销期限为30天。"
+          }
+        ],
+        "gaps": [],
+        "conflicts": [],
+        "follow_up_question": "",
+        "steps": 3,
+        "mode": "remote",
+        "model_calls": 4,
+        "usage": {
+          "prompt_tokens": 2087,
+          "completion_tokens": 551,
+          "total_tokens": 2638,
+          "prompt_cache_hit_tokens": 896,
+          "prompt_cache_miss_tokens": 1191
+        },
+        "elapsed_seconds": 6.109
+      }
+    }
+  ],
+  "elapsed_seconds": 14.23
+}

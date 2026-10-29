@@ -1,0 +1,130 @@
+{
+  "mode": "remote",
+  "model": "deepseek-flash",
+  "cases": [
+    {
+      "case": "clear",
+      "group": "normal",
+      "path": "normal/clear",
+      "checks": {
+        "expected_status": true,
+        "expected_text": true,
+        "real_model": true,
+        "has_citations": true
+      },
+      "passed": true
+    },
+    {
+      "case": "paraphrase",
+      "group": "normal",
+      "path": "normal/paraphrase",
+      "checks": {
+        "expected_status": true,
+        "expected_text": true,
+        "real_model": true,
+        "has_citations": true
+      },
+      "passed": true
+    },
+    {
+      "case": "conflict",
+      "group": "insufficient",
+      "path": "insufficient/conflict",
+      "checks": {
+        "expected_status": true,
+        "expected_text": true,
+        "real_model": true,
+        "two_sources": true,
+        "unresolved": true,
+        "question": true
+      },
+      "passed": true
+    },
+    {
+      "case": "outside",
+      "group": "insufficient",
+      "path": "insufficient/outside",
+      "checks": {
+        "expected_status": true,
+        "expected_text": true,
+        "real_model": true
+      },
+      "passed": true
+    },
+    {
+      "case": "context",
+      "group": "insufficient",
+      "path": "insufficient/context",
+      "checks": {
+        "expected_status": true,
+        "expected_text": true,
+        "real_model": true
+      },
+      "passed": true
+    },
+    {
+      "case": "transient",
+      "group": "failure",
+      "path": "failure/transient",
+      "checks": {
+        "expected_status": true,
+        "expected_text": true,
+        "real_model": true,
+        "has_citations": true,
+        "tool_failure_observed": true
+      },
+      "passed": true
+    },
+    {
+      "case": "persistent",
+      "group": "failure",
+      "path": "failure/persistent",
+      "checks": {
+        "expected_status": true,
+        "expected_text": true,
+        "real_model": true,
+        "tool_failure_observed": true
+      },
+      "passed": true
+    },
+    {
+      "case": "changed",
+      "group": "normal",
+      "path": "normal/changed",
+      "checks": {
+        "expected_status": true,
+        "expected_text": true,
+        "real_model": true,
+        "has_citations": true
+      },
+      "passed": true
+    },
+    {
+      "case": "resolved",
+      "group": "normal",
+      "path": "normal/resolved",
+      "checks": {
+        "expected_status": true,
+        "expected_text": true,
+        "real_model": true,
+        "has_citations": true,
+        "resolution_source": true
+      },
+      "passed": true
+    },
+    {
+      "case": "budget",
+      "group": "failure",
+      "path": "failure/budget",
+      "checks": {
+        "expected_status": true,
+        "expected_text": true,
+        "real_model": true
+      },
+      "passed": true
+    }
+  ],
+  "status": "completed",
+  "not_run": [],
+  "elapsed_seconds": 135.594
+}

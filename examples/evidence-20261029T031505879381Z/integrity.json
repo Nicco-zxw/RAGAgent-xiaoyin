@@ -1,0 +1,127 @@
+{
+  "source_status": "completed",
+  "cases": [
+    {
+      "case": "clear",
+      "integrity_checks": {
+        "documents_hash": true,
+        "real_trace": true,
+        "final_matches": true,
+        "within_budget": true,
+        "exact_read_citations": true
+      },
+      "integrity_passed": true,
+      "behavior_passed": true
+    },
+    {
+      "case": "paraphrase",
+      "integrity_checks": {
+        "documents_hash": true,
+        "real_trace": true,
+        "final_matches": true,
+        "within_budget": true,
+        "exact_read_citations": true
+      },
+      "integrity_passed": true,
+      "behavior_passed": true
+    },
+    {
+      "case": "conflict",
+      "integrity_checks": {
+        "documents_hash": true,
+        "real_trace": true,
+        "final_matches": true,
+        "within_budget": true,
+        "exact_read_citations": true
+      },
+      "integrity_passed": true,
+      "behavior_passed": true
+    },
+    {
+      "case": "outside",
+      "integrity_checks": {
+        "documents_hash": true,
+        "real_trace": true,
+        "final_matches": true,
+        "within_budget": true,
+        "exact_read_citations": true
+      },
+      "integrity_passed": true,
+      "behavior_passed": true
+    },
+    {
+      "case": "context",
+      "integrity_checks": {
+        "documents_hash": true,
+        "real_trace": true,
+        "final_matches": true,
+        "within_budget": true,
+        "exact_read_citations": true
+      },
+      "integrity_passed": true,
+      "behavior_passed": true
+    },
+    {
+      "case": "transient",
+      "integrity_checks": {
+        "documents_hash": true,
+        "real_trace": true,
+        "final_matches": true,
+        "within_budget": true,
+        "exact_read_citations": true
+      },
+      "integrity_passed": true,
+      "behavior_passed": true
+    },
+    {
+      "case": "persistent",
+      "integrity_checks": {
+        "documents_hash": true,
+        "real_trace": true,
+        "final_matches": true,
+        "within_budget": true,
+        "exact_read_citations": true
+      },
+      "integrity_passed": true,
+      "behavior_passed": true
+    },
+    {
+      "case": "changed",
+      "integrity_checks": {
+        "documents_hash": true,
+        "real_trace": true,
+        "final_matches": true,
+        "within_budget": true,
+        "exact_read_citations": true
+      },
+      "integrity_passed": true,
+      "behavior_passed": true
+    },
+    {
+      "case": "resolved",
+      "integrity_checks": {
+        "documents_hash": true,
+        "real_trace": true,
+        "final_matches": true,
+        "within_budget": true,
+        "exact_read_citations": true
+      },
+      "integrity_passed": true,
+      "behavior_passed": true
+    },
+    {
+      "case": "budget",
+      "integrity_checks": {
+        "documents_hash": true,
+        "real_trace": true,
+        "final_matches": true,
+        "within_budget": true,
+        "exact_read_citations": true
+      },
+      "integrity_passed": true,
+      "behavior_passed": true
+    }
+  ],
+  "integrity_passed": true,
+  "boundary": "Checks saved real artifacts, not semantic correctness or new model decisions."
+}

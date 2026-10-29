@@ -1,0 +1,56 @@
+{
+  "status": "answered",
+  "answer": "现行报销期限为15天。D01关于报销期限30天的规定已被D02替代，不再适用。",
+  "citations": [
+    {
+      "document_id": "D03",
+      "passage_id": "P01",
+      "version_date": "2026-03-01",
+      "quote": "现行费用报销统一适用D02，报销期限为15天。D01关于报销期限30天的规定已被D02替代，不再适用。"
+    },
+    {
+      "document_id": "D02",
+      "passage_id": "P01",
+      "version_date": "2026-02-01",
+      "quote": "报销期限为15天。"
+    }
+  ],
+  "gaps": [],
+  "conflicts": [
+    {
+      "topic": "报销期限（30天 vs 15天）",
+      "sources": [
+        "D01/P01",
+        "D02/P01"
+      ],
+      "resolved": true,
+      "resolution_citations": [
+        {
+          "document_id": "D03",
+          "passage_id": "P01",
+          "version_date": "2026-03-01",
+          "quote": "现行费用报销统一适用D02，报销期限为15天。D01关于报销期限30天的规定已被D02替代，不再适用。"
+        },
+        {
+          "document_id": "D02",
+          "passage_id": "P01",
+          "version_date": "2026-02-01",
+          "quote": "报销期限为15天。"
+        }
+      ]
+    }
+  ],
+  "follow_up_question": null,
+  "steps": 9,
+  "mode": "remote",
+  "audit_enabled": true,
+  "model_calls": 10,
+  "usage": {
+    "prompt_tokens": 12961,
+    "completion_tokens": 6782,
+    "total_tokens": 19743,
+    "prompt_cache_hit_tokens": 7936,
+    "prompt_cache_miss_tokens": 5025
+  },
+  "elapsed_seconds": 44.922
+}

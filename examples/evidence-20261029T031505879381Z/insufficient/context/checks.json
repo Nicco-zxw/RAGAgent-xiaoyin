@@ -1,0 +1,11 @@
+{
+  "case": "context",
+  "group": "insufficient",
+  "path": "insufficient/context",
+  "checks": {
+    "expected_status": true,
+    "expected_text": true,
+    "real_model": true
+  },
+  "passed": true
+}

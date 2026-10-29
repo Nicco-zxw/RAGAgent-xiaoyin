@@ -1,0 +1,262 @@
+{
+  "model": "deepseek-flash",
+  "elapsed_seconds": 90.31,
+  "cases": [
+    {
+      "case": "resolved",
+      "passed": true,
+      "expected": "answered",
+      "result": {
+        "status": "answered",
+        "answer": "现行报销期限为15天；D01规定的30天已被D02替代，不再适用。",
+        "citations": [
+          {
+            "document_id": "D02",
+            "passage_id": "P01",
+            "version_date": "2026-02-01",
+            "quote": "报销期限为15天。"
+          },
+          {
+            "document_id": "D03",
+            "passage_id": "P01",
+            "version_date": "2026-03-01",
+            "quote": "现行费用报销统一适用D02，报销期限为15天。D01关于报销期限30天的规定已被D02替代，不再适用。"
+          }
+        ],
+        "gaps": [],
+        "conflicts": [
+          {
+            "topic": "报销期限",
+            "sources": [
+              "D01/P01",
+              "D02/P01"
+            ],
+            "resolved": true,
+            "resolution_citations": [
+              {
+                "document_id": "D03",
+                "passage_id": "P01",
+                "version_date": "2026-03-01",
+                "quote": "现行费用报销统一适用D02，报销期限为15天。D01关于报销期限30天的规定已被D02替代，不再适用。"
+              },
+              {
+                "document_id": "D02",
+                "passage_id": "P01",
+                "version_date": "2026-02-01",
+                "quote": "报销期限为15天。"
+              }
+            ]
+          }
+        ],
+        "follow_up_question": null,
+        "steps": 9,
+        "mode": "remote"
+      }
+    },
+    {
+      "case": "persistent_failure",
+      "passed": true,
+      "expected": "tool_error",
+      "result": {
+        "status": "tool_error",
+        "answer": "无法确认报销期限：检索到 D01/P01 的摘要为“报销期限为30天”，但连续两次读取原文均超时，未能取得可引用原文。",
+        "citations": [],
+        "gaps": [
+          "D01/P01 原文读取超时，无法核验并引用具体条款"
+        ],
+        "conflicts": [],
+        "follow_up_question": null,
+        "steps": 5,
+        "mode": "remote"
+      }
+    },
+    {
+      "case": "clear",
+      "passed": true,
+      "expected": "answered",
+      "result": {
+        "status": "answered",
+        "answer": "报销期限为30天。",
+        "citations": [
+          {
+            "document_id": "D01",
+            "passage_id": "P01",
+            "version_date": "2026-01-01",
+            "quote": "报销期限为30天。"
+          }
+        ],
+        "gaps": [],
+        "conflicts": [],
+        "follow_up_question": null,
+        "steps": 3,
+        "mode": "remote"
+      }
+    },
+    {
+      "case": "conflict",
+      "passed": true,
+      "expected": "needs_clarification",
+      "result": {
+        "status": "needs_clarification",
+        "answer": "现有资料对报销期限存在冲突：D01规定为30天，D02规定为15天；未检索到适用范围、废止、替代或优先级依据，无法确定应适用哪一期限。请补充报销主体、费用类型或应适用的制度文件。",
+        "citations": [
+          {
+            "document_id": "D01",
+            "passage_id": "P01",
+            "version_date": "2026-01-01",
+            "quote": "报销期限为30天。"
+          },
+          {
+            "document_id": "D02",
+            "passage_id": "P01",
+            "version_date": "2026-02-01",
+            "quote": "报销期限为15天。"
+          }
+        ],
+        "gaps": [
+          "未找到报销期限规定的适用范围、废止、替代或优先级依据"
+        ],
+        "conflicts": [
+          {
+            "topic": "报销期限",
+            "sources": [
+              "D01/P01",
+              "D02/P01"
+            ],
+            "resolved": false
+          }
+        ],
+        "follow_up_question": "请明确该报销适用的主体、费用类型或制度版本，以便确定适用30天还是15天？",
+        "steps": 5,
+        "mode": "remote"
+      }
+    },
+    {
+      "case": "outside",
+      "passed": true,
+      "expected": "insufficient_evidence",
+      "result": {
+        "status": "insufficient_evidence",
+        "answer": "企业知识库中没有与天气预报相关的资料，无法回答“明天天气怎样”。该问题属于资料范围外的问题，不做常识性推测作答。",
+        "citations": [],
+        "gaps": [
+          "知识库检索“天气 气象 预报”无任何命中，缺少可用于回答的气象类依据。"
+        ],
+        "conflicts": [],
+        "follow_up_question": "您是想查询企业知识库内的哪类信息（例如差旅、考勤、应急预案中的天气相关条款）？我可以帮您定位相应文档。",
+        "steps": 2,
+        "mode": "remote"
+      }
+    },
+    {
+      "case": "paraphrase",
+      "passed": true,
+      "expected": "answered",
+      "result": {
+        "status": "answered",
+        "answer": "根据现有资料，报销期限为30天，即报销材料最迟应在30天内提交。",
+        "citations": [
+          {
+            "document_id": "D01",
+            "passage_id": "P01",
+            "version_date": "2026-01-01",
+            "quote": "报销期限为30天。"
+          }
+        ],
+        "gaps": [
+          "资料未说明30天的起算时间及具体适用范围。"
+        ],
+        "conflicts": [],
+        "follow_up_question": null,
+        "steps": 4,
+        "mode": "remote"
+      }
+    },
+    {
+      "case": "context",
+      "passed": true,
+      "expected": "insufficient_evidence",
+      "result": {
+        "status": "insufficient_evidence",
+        "answer": "现有资料仅规定“报销期限为30天”，但未说明该期限是否适用于试用期员工，也未找到试用期员工的专门报销规定，因此无法确认试用期员工的报销期限。",
+        "citations": [
+          {
+            "document_id": "D01",
+            "passage_id": "P01",
+            "version_date": "2026-01-01",
+            "quote": "报销期限为30天。"
+          }
+        ],
+        "gaps": [
+          "资料未说明“试用期员工”是否属于该报销制度的适用范围",
+          "未找到试用期员工报销期限的专门规定"
+        ],
+        "conflicts": [],
+        "follow_up_question": "请确认试用期员工是否适用同一报销制度，或提供相关制度名称/文号以便进一步查证。",
+        "steps": 5,
+        "mode": "remote"
+      }
+    },
+    {
+      "case": "failure",
+      "passed": true,
+      "expected": "answered",
+      "result": {
+        "status": "answered",
+        "answer": "根据已读取原文，报销期限为30天。",
+        "citations": [
+          {
+            "document_id": "D01",
+            "passage_id": "P01",
+            "version_date": "2026-01-01",
+            "quote": "报销期限为30天。"
+          }
+        ],
+        "gaps": [],
+        "conflicts": [],
+        "follow_up_question": null,
+        "steps": 4,
+        "mode": "remote"
+      }
+    },
+    {
+      "case": "changed",
+      "passed": true,
+      "expected": "answered",
+      "result": {
+        "status": "answered",
+        "answer": "报销期限为45天。",
+        "citations": [
+          {
+            "document_id": "D01",
+            "passage_id": "P01",
+            "version_date": "2026-01-01",
+            "quote": "报销期限为45天。"
+          }
+        ],
+        "gaps": [],
+        "conflicts": [],
+        "follow_up_question": null,
+        "steps": 3,
+        "mode": "remote"
+      }
+    },
+    {
+      "case": "budget",
+      "passed": true,
+      "expected": "budget_exceeded",
+      "result": {
+        "status": "budget_exceeded",
+        "answer": "达到执行上限，任务尚未完成。",
+        "citations": [],
+        "gaps": [
+          "需要更多执行步骤或人工确认"
+        ],
+        "conflicts": [],
+        "follow_up_question": null,
+        "steps": 1,
+        "mode": "remote"
+      }
+    }
+  ]
+}

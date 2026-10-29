@@ -1,0 +1,13 @@
+{
+  "case": "resolved",
+  "group": "normal",
+  "path": "normal/resolved",
+  "checks": {
+    "expected_status": true,
+    "expected_text": true,
+    "real_model": true,
+    "has_citations": true,
+    "resolution_source": true
+  },
+  "passed": true
+}

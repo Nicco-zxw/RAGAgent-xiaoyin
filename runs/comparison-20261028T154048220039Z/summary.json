@@ -1,0 +1,45 @@
+{
+  "status": "blocked",
+  "model": "deepseek-flash",
+  "benchmark_sha256": "32ca0f5b81df9fbfb4d62ba6403576547cd58ec73657eb4e98fae2661b42d818",
+  "requested_repeat": 1,
+  "cases": [
+    {
+      "case": "budget",
+      "repeat": 0,
+      "audit_enabled": true,
+      "passed": false,
+      "issues": [
+        "unexpected status"
+      ],
+      "retrieval_recall": null,
+      "result": {
+        "status": "model_error",
+        "answer": "模型调用失败。",
+        "citations": [],
+        "gaps": [
+          "HTTPError"
+        ],
+        "conflicts": [],
+        "follow_up_question": null,
+        "http_status": 402,
+        "steps": 0,
+        "mode": "remote",
+        "audit_enabled": true,
+        "model_calls": 1,
+        "usage": {},
+        "elapsed_seconds": 0.578
+      }
+    }
+  ],
+  "not_run": [],
+  "elapsed_seconds": 0.578,
+  "audit_on": {
+    "runs": 1,
+    "passed": 0,
+    "model_errors": 1,
+    "model_calls": 1,
+    "reported_tokens": 0,
+    "total_seconds": 0.578
+  }
+}

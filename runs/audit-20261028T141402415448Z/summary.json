@@ -1,0 +1,147 @@
+{
+  "cases": [
+    {
+      "case": "overgeneralization",
+      "expected": false,
+      "review": {
+        "approved": false,
+        "issues": [
+          "候选回答将仅适用于销售部的30天报销期限扩大为所有员工，条件/对象扩大。",
+          "候选回答遗漏研发部员工报销期限为15天这一事实。",
+          "问题要求分别回答销售部和研发部，候选回答未分别说明。"
+        ],
+        "claims": [
+          {
+            "claim": "销售部员工报销期限为30天",
+            "supported": true,
+            "sources": [
+              "S01/P01"
+            ]
+          },
+          {
+            "claim": "研发部员工报销期限为15天",
+            "supported": true,
+            "sources": [
+              "S02/P01"
+            ]
+          },
+          {
+            "claim": "所有员工报销期限为30天",
+            "supported": false,
+            "sources": [
+              "S01/P01",
+              "S02/P01"
+            ]
+          }
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case": "scoped",
+      "expected": true,
+      "review": {
+        "approved": true,
+        "issues": [],
+        "claims": [
+          {
+            "claim": "销售部员工报销期限为30天",
+            "supported": true,
+            "sources": [
+              "S01/P01"
+            ]
+          },
+          {
+            "claim": "研发部员工报销期限为15天",
+            "supported": true,
+            "sources": [
+              "S02/P01"
+            ]
+          }
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case": "wrong_number",
+      "expected": false,
+      "review": {
+        "approved": false,
+        "issues": [
+          "回答称销售部报销期限为15天，但引用S01/P01原文为30天，事实矛盾。",
+          "未回答研发部报销期限；S02/P01明确研发部为15天。",
+          "应修正为：销售部30天（S01/P01）、研发部15天（S02/P01）。"
+        ],
+        "claims": [
+          {
+            "claim": "销售部员工报销期限为15天",
+            "supported": false,
+            "sources": [
+              "S01/P01"
+            ]
+          }
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case": "omitted_conflict",
+      "review": {
+        "approved": false,
+        "issues": [
+          "候选回答仅引用D02/P01的15天，遗漏已读资料D01/P01的30天，二者适用范围未区分且D02未标注替代D01，不能仅凭更新时间排除冲突",
+          "应说明存在15天与30天两种规定，并核实适用对象或有效版本；若无法确认，应明确未确认，不得直接给出确定期限"
+        ],
+        "claims": [
+          {
+            "claim": "报销期限为15天",
+            "supported": true,
+            "sources": [
+              "D02/P01"
+            ]
+          }
+        ]
+      },
+      "passed": true
+    },
+    {
+      "case": "scoped_agent",
+      "result": {
+        "status": "answered",
+        "answer": "销售部员工的报销期限为30天。",
+        "citations": [
+          {
+            "document_id": "S01",
+            "passage_id": "P01",
+            "version_date": "2026-01-01",
+            "quote": "销售部员工报销期限为30天，本条仅适用于销售部。"
+          }
+        ],
+        "gaps": [],
+        "conflicts": [],
+        "follow_up_question": null,
+        "steps": 3,
+        "mode": "remote",
+        "model_calls": 8,
+        "usage": {
+          "prompt_tokens": 4511,
+          "completion_tokens": 2998,
+          "total_tokens": 7509,
+          "prompt_cache_hit_tokens": 1152,
+          "prompt_cache_miss_tokens": 3359
+        },
+        "elapsed_seconds": 6.922
+      },
+      "passed": true
+    }
+  ],
+  "elapsed_seconds": 23.28,
+  "calls": 8,
+  "usage": {
+    "prompt_tokens": 4511,
+    "completion_tokens": 2998,
+    "total_tokens": 7509,
+    "prompt_cache_hit_tokens": 1152,
+    "prompt_cache_miss_tokens": 3359
+  }
+}
