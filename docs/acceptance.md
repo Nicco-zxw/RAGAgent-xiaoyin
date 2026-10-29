@@ -27,9 +27,9 @@ Observed resolved path: finish rejected at step 6; invalid JSON at step 7; model
 Remaining: model may omit conflict detection; semantic entailment is not guaranteed by exact-quote validation. GitHub publication pending.
 
 
-Optimization results: 17/20 repeated acceptance expectations met; targeted audit 5/5, clear paraphrase 2/2. Suite runtime 297.46 seconds. See docs/optimization-report.md for failures and HTTP 402 blocking further calls. No mock fallback used.
+Optimization results: 17/20 repeated acceptance expectations met; targeted audit 5/5, clear paraphrase 2/2. Suite runtime 297.46 seconds. See the later results below and docs/03-evaluation.md; HTTP 402 was a historical interruption. No mock fallback used.
 
-固定验收与对照准备：详情见docs/comparison-progress.md。本轮真实模型HTTP 402；预算终止未完成验收。36项审查开关对照已准备、未执行。明确材料提交与缺失材料条件分开验收，资料均为合成测试，不代表真实企业政策。
+固定验收与对照准备（历史记录，最新结果见docs/03-evaluation.md）：本轮真实模型HTTP 402；预算终止未完成验收。36项审查开关对照已准备、未执行。明确材料提交与缺失材料条件分开验收，资料均为合成测试，不代表真实企业政策。
 
 
 ## 接口恢复后的最终真实对照结果

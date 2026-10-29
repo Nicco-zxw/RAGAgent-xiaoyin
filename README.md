@@ -81,9 +81,9 @@ Mock是确定性规则模拟，仅验证流程，不证明真实模型决策效�
 
 语义审查与问答使用同一模型服务，可能共同漏检；未召回的证据无法充分审查。原文匹配不代表语义必然支持。仅为本地小规模合成库，无真实文档解析、权限、部署或生产Runtime，这些不是题目必需项。
 
-完整开发墙钟未计时，不倒填；测试实测耗时见docs/time_log.md。个人已确认参与提示词优化、需求与验收确认、模型配置及最终结果复核；逐项操作与实际投入未另记录，AI不补造。题号3；代码已推送到目标仓库codex/submission分支，评审访问权限仍待本人确认。
+完整开发墙钟未计时，不倒填；测试实测耗时见docs/03-evaluation.md。个人已确认参与提示词优化、需求与验收确认、模型配置及最终结果复核；逐项操作与实际投入未另记录，AI不补造。题号3；代码已推送到目标仓库codex/submission分支，评审访问权限仍待本人确认。
 
-题号：**3**。目标GitHub仓库：[Nicco-zxw/RAGAgent-xiaoyin](https://github.com/Nicco-zxw/RAGAgent-xiaoyin)。主要由AI辅助实现；个人复核任务见[任务清单](docs/personal-review-tasks.md)，已按本人确认更新贡献与复核范围。
+题号：**3**。目标GitHub仓库：[Nicco-zxw/RAGAgent-xiaoyin](https://github.com/Nicco-zxw/RAGAgent-xiaoyin)。主要由AI辅助实现；个人复核任务见[贡献说明](docs/04-ai-usage.md)，已按本人确认更新贡献与复核范围。
 
 
 当前提交分支：[codex/submission](https://github.com/Nicco-zxw/RAGAgent-xiaoyin/tree/codex/submission)。提交SHA以GitHub该分支及git rev-parse HEAD为准。
