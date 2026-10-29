@@ -88,3 +88,7 @@ Mock是确定性规则模拟，仅验证流程，不证明真实模型决策效�
 
 当前提交分支：[codex/submission](https://github.com/Nicco-zxw/RAGAgent-xiaoyin/tree/codex/submission)。提交SHA以GitHub该分支及git rev-parse HEAD为准。
 
+
+## 下一步
+
+个人复核已确认完成，环境复验及分支推送已完成。接下来确认评审账号可读取仓库，再提交题号3、分支URL和最新commit SHA；不再将个人复核列为待办。
